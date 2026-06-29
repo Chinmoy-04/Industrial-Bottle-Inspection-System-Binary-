@@ -1,0 +1,186 @@
+# =============================================================================
+# Krones Vision AI Challenge — aggressive data & secrets exclusion
+# No proprietary images, datasets, labels, or competition artifacts in git.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Data directories (any layout)
+# -----------------------------------------------------------------------------
+yolo_dataset/
+data/
+dataset/
+datasets/
+krones_dataset/
+krones-data/
+images/
+train_images/
+test_images/
+raw/
+input/
+competition_data/
+**/train_images/
+**/test_images/
+
+# -----------------------------------------------------------------------------
+# Image & video formats (never track raw media)
+# -----------------------------------------------------------------------------
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.png
+*.PNG
+*.gif
+*.GIF
+*.bmp
+*.BMP
+*.tif
+*.tiff
+*.TIF
+*.TIFF
+*.webp
+*.WEBP
+*.svg
+*.ico
+*.heic
+*.heif
+*.avif
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# -----------------------------------------------------------------------------
+# Archives & compressed bundles
+# -----------------------------------------------------------------------------
+*.zip
+*.ZIP
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.tbz2
+*.tar.xz
+*.txz
+*.7z
+*.rar
+*.gz
+*.bz2
+*.xz
+
+# -----------------------------------------------------------------------------
+# Competition / proprietary tabular data & annotations
+# -----------------------------------------------------------------------------
+Submissions/
+submissions/
+train.csv
+test.csv
+sample_submission.csv
+submission*.csv
+**/*.csv
+pseudo_labels.csv
+bottletypes.csv
+*_annotations.json
+train_annotations.json
+test_annotations*.json
+**/annotations/
+
+# -----------------------------------------------------------------------------
+# Model weights, checkpoints, exports, caches
+# -----------------------------------------------------------------------------
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+*.pb
+*.h5
+*.keras
+*.weights
+runs/
+checkpoints/
+weights/
+models/
+training_artifacts/
+wandb/
+mlruns/
+lightning_logs/
+tensorboard/
+*.cache
+*.npz
+*.npy
+oof_probs*.npz
+oof_cache*.npz
+ensemble_*.npz
+ensemble_threshold*.txt
+binary_thresholds*.json
+ensemble_weights*.json
+optimal_threshold.txt
+
+# -----------------------------------------------------------------------------
+# Python environments & caches
+# -----------------------------------------------------------------------------
+venv/
+venv312/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# -----------------------------------------------------------------------------
+# Secrets, local config, IDE
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Cursor / local agent context (optional local notes)
+.cursor/
+agent-transcripts/
+CONTEXT.md
+CLAUDE_ACTION_PLAN.md
+PROJECT_CONTEXT.md
+
+# -----------------------------------------------------------------------------
+# OS & temp files
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.temp
+*.log
+pause_training.flag
+
+# -----------------------------------------------------------------------------
+# Jupyter notebook checkpoints & large embedded outputs (optional safety)
+# -----------------------------------------------------------------------------
+.ipynb_checkpoints/
+# Uncomment to skip competition starter with heavy outputs:
+# starter-training-notebook.ipynb
